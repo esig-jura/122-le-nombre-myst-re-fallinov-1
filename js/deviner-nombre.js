@@ -26,3 +26,13 @@ let nbEssais = 0;
 let reponse = null;
 let message = `Le nombre à deviner est compris entre ${MIN} et ${MAX}.`;
 
+console.log(nbMystere);
+
+do {
+    // Récupération de la réponse de l'utilisateur
+    // et la convertir en nombre entier avec parseInt()
+    reponse = parseInt(prompt(message));
+    nbEssais++; // Incrémentation du nombre d'essais
+} while (reponse !== nbMystere);
+
+alert(`Bravo, vous avez trouvé en ${nbEssais} essai(s) !`);
