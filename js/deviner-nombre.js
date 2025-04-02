@@ -16,5 +16,13 @@
 function tireNombre(min, max) {
     return Math.floor(Math.random() * (max - min) + min);
 }
+// Constantes
+const MIN = 1;
+const MAX = 100;
 
-alert(tireNombre(50,150));
+// Variables
+let nbMystere = tireNombre(MIN, MAX);
+let nbEssais = 0;
+let reponse = null;
+let message = `Le nombre à deviner est compris entre ${MIN} et ${MAX}.`;
+
