@@ -33,6 +33,14 @@ do {
     // et la convertir en nombre entier avec parseInt()
     reponse = parseInt(prompt(message));
     nbEssais++; // Incrémentation du nombre d'essais
+
+    // Message à afficher en fonction de la réponse
+    if(reponse > nbMystere) {
+        message = 'C\'est moins !';
+    } else {
+        message = 'C\'est plus !';
+    }
+
 } while (reponse !== nbMystere);
 
 alert(`Bravo, vous avez trouvé en ${nbEssais} essai(s) !`);
